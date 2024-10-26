@@ -1,0 +1,11 @@
+clc; close all; clear;
+
+wiersze=input("Podaj liczbe wierszy");
+kolumny=input("Podaj liczbe kolumn");
+
+macierz=zeros(wiersze,kolumny);
+for i=1:kolumny
+    macierz(i,i)=7;
+    macierz(i,end)
+end
+disp(macierz);

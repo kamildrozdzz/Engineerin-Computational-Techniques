@@ -1,0 +1,11 @@
+C=1*10^(-6);
+R=10^3;
+L=10*10^(-3);
+f=logspace(5,10,100);
+w=2*pi*f;
+s=1i*w;
+K=(L*s)./(R*L*C*s.^2+L*s+R);
+semilogx(f,real(K),'b--');
+hold on; grid on;
+K1=angle(K);
+semilogx(f,K1,'r--');

@@ -1,0 +1,6 @@
+function [x0] = test(f,a,b,p)
+    if (f(a)*f(b)<0 && a<b)
+        x0=a;
+        while  
+    end
+end

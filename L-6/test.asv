@@ -1,0 +1,21 @@
+clc; clear; close all;
+a = (rand(1,6)-0.5)*10;
+xk = (rand(1,6)-0.5)*20;
+yk = polyval(a,xk);
+x=linspace(-10,0.1,10);
+N=length(x);
+n=length(xk)-1;
+y=zeros(1,N);
+for num=1:N
+    for k=1:n+1
+        iloraz=1;
+        for l=1:n+1
+            if k~=l
+                iloraz=iloraz*(x(num)*xk(l))/(xk(k)-xk(l));
+            end
+        end
+        y(num)=y(num)+iloraz*yk(k);
+    end
+end
+y1=polyval(a,x,'ro');
+plot(x,y1,x,y)

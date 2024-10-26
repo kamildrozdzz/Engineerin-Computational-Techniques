@@ -1,0 +1,9 @@
+clc; close all; clear;
+x=linspace(-pi,pi,100);
+sin_x=sin(x);
+N_values=1:100;
+errors=zeros(size(N_values));
+for i=1:length(N_values)
+    N=N_values(i);
+    approx_sin_x=zeros(si)
+end
